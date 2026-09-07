@@ -1,0 +1,4 @@
+// 项目根 build.gradle：只声明 Android Gradle 插件版本
+plugins {
+    id 'com.android.application' version '8.9.2' apply false
+}

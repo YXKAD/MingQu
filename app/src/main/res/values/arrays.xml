@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- LSPosed 推荐作用域：新加应用时在这里加一行 -->
+    <string-array name="xposed_scope">
+        <item>com.ss.android.yumme.video</item>
+    </string-array>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 明渠 · 夜色与月光 -->
+    <color name="night_bg">#0E1726</color>        <!-- 夜空底色 -->
+    <color name="night_card">#16263D</color>      <!-- 卡片蓝 -->
+    <color name="night_deep">#0A1220</color>      <!-- 深蓝衬底 -->
+    <color name="moon_gold">#E9C77B</color>       <!-- 月光金（主色） -->
+    <color name="moon_soft">#D9B98A</color>       <!-- 柔和月晕 -->
+    <color name="text_light">#E8EEF6</color>      <!-- 主文字 -->
+    <color name="text_soft">#9AA7B8</color>       <!-- 次级文字 -->
+    <color name="ink">#141414</color>             <!-- 金底上的深色文字 -->
+</resources>

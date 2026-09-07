@@ -1,0 +1,38 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.mingqu.hook'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.mingqu.hook"
+        minSdk 24
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    // 注意：必须是 compileOnly！Xposed API 运行时由设备上的 LSPosed 框架提供，
+    // 如果写成 implementation 打进 APK，反而会出问题。
+    compileOnly 'de.robv.android.xposed:api:82'
+
+    // 界面用：Material3 卡片/开关 + AppCompatActivity
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+}

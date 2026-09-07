@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 明渠：我本将心向明月，奈何明月照沟渠。
+         整体固定为夜色主题：夜空蓝 + 月光金，不随系统深浅色切换。 -->
+    <style name="Theme.MingQu" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/moon_gold</item>
+        <item name="colorOnPrimary">@color/ink</item>
+        <item name="colorPrimaryContainer">@color/night_deep</item>
+        <item name="colorOnPrimaryContainer">@color/moon_gold</item>
+        <item name="colorSecondary">@color/moon_soft</item>
+        <item name="colorOnSecondary">@color/ink</item>
+        <item name="colorSecondaryContainer">@color/night_deep</item>
+        <item name="colorOnSecondaryContainer">@color/moon_soft</item>
+        <item name="colorSurface">@color/night_card</item>
+        <item name="colorOnSurface">@color/text_light</item>
+        <item name="colorSurfaceVariant">@color/night_deep</item>
+        <item name="colorOnSurfaceVariant">@color/text_soft</item>
+        <item name="android:colorBackground">@color/night_bg</item>
+        <item name="colorOnBackground">@color/text_light</item>
+        <item name="android:statusBarColor">@color/night_bg</item>
+        <item name="android:navigationBarColor">@color/night_bg</item>
+    </style>
+</resources>
