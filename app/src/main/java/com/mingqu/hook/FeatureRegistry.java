@@ -31,7 +31,13 @@ public class FeatureRegistry {
                                 "直播自动最高画质",
                                 "进入直播间自动切换为最高清晰度",
                                 true,
-                                new LiveMaxQuality())
+                                new LiveMaxQuality()),
+                        new FeatureEntry(
+                                "video_max_quality",
+                                "视频自动最高画质",
+                                "信息流短视频自动以最高清晰度播放",
+                                true,
+                                new VideoMaxQuality()),
                 }));
 
         // =====================================================
