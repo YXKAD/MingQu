@@ -1,4 +1,4 @@
-# 明渠 · MingQu
+﻿# 明渠 · MingQu
 
 > 我本将心向明月，奈何明月照沟渠。
 
@@ -8,10 +8,10 @@
 
 | 应用 | 包名 | 功能 | 说明 |
 |---|---|---|---|
-| 抖音精选 | `com.ss.android.yumme.video` | 屏蔽新版本更新 | 拦截"发现新版本"更新弹窗 |
-| 抖音精选 | `com.ss.android.yumme.video` | 直播自动最高画质 | 进入直播间自动切换为最高清晰度 |
+| 抖音精选 | `com.ss.android.yumme.video` | 屏蔽新版本更新 | 拦截 UpdateHelper.LJIJI 构建的"发现新版本"弹窗及更新页 UpdateActivity |
+| 抖音精选 | `com.ss.android.yumme.video` | 直播自动最高画质 | 进直播间自动切最高清晰度：蓝光帧彩(xuhd)→原画(origin)→蓝光(uhd)→超清(hd)，逐档探测支持 |
 
-> 注：两个功能的精确 hook 仍需 jadx 反编译目标应用后完善（见下文"进阶：逆向定位"）。
+> 均基于 jadx 反编译 v39.8.0 精确定位；日志前缀 `[明渠]` 可在 LSPosed → 日志 中查看命中情况。
 
 ## 界面
 
