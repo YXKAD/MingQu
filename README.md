@@ -1,4 +1,4 @@
-﻿# 明渠 · MingQu
+# 明渠 · MingQu
 
 > 我本将心向明月，奈何明月照沟渠。
 
@@ -12,6 +12,9 @@
 | 抖音精选 | `com.ss.android.yumme.video` | 直播自动最高画质 | 进房自动蓝光(最高可用档，逐档探测向下兼容)；手动切换尊重选择，重启恢复强制 |
 | 抖音精选 | `com.ss.android.yumme.video` | 视频自动最高画质 | 冷启动后信息流视频自动最高清晰度（按每视频支持列表向下兼容）；手动切换后不再强制，重启恢复 |
 | 抖音精选 | `com.ss.android.yumme.video` | 直播面板标注分辨率帧率 | 画质面板档位旁标注该档分辨率+帧率（subname 副标题，不改档位名，点击切换不受影响） |
+| 抖音精选 | `com.ss.android.yumme.video` | 机型伪装 | 伪装为 vivo Pad6 Pro，解锁服务端 2K/4K 视频源与直播原画档位（可单独关闭） |
+| 抖音精选 | `com.ss.android.yumme.video` | 屏蔽推荐流直播间卡片 | 数据层过滤：直播 item 在进入列表前移除（不显示、不占位） |
+| 抖音精选 | `com.ss.android.yumme.video` | 双击点赞→打开评论区（测试中） | 双击不再点赞，改为打开评论区；暂停拦截已生效，暂停标志残留已知（手动暂停再恢复后消失） |
 
 > 均基于 jadx 反编译 v39.8.0 精确定位；日志前缀 `[明渠]` 可在 LSPosed → 日志 中查看命中情况。
 
@@ -57,7 +60,7 @@ gradle assembleDebug
 1. 提取目标应用 APK：`adb shell pm path <包名>` → `adb pull`，或用 MT 管理器 root 提取
 2. 用 [jadx](https://github.com/skylot/jadx) 反编译
 3. 搜索关键中文字符串（如"发现新版本""立即更新""超清""蓝光"）定位弹窗/清晰度相关类与方法
-4. 把精确 hook 填入对应的功能类（`BlockUpdate` / `LiveMaxQuality`），替换掉通用拦截或 TODO
+4. 把精确 hook 填入对应的功能类，替换掉通用拦截或 TODO
 
 ## 免责声明
 
