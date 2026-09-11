@@ -28,7 +28,8 @@ import de.robv.android.xposed.XposedHelpers;
 public class LiveMaxQuality implements FeatureEntry.FeatureHook {
 
     /** 从高到低的直播档位候选 */
-    /** 档位候选（按优先级）：xuhd=帧彩(无独立流，探测兜底) → uhd=蓝光(精选面板最高且高亮正确) → origin=原画(面板常不显示) → hd=超清 */
+    /** 档位候选（按优先级）：xuhd=帧彩(无独立流，探测兜底) → uhd=蓝光(1440x1080@60，面板最高且高亮正确) → origin=原画(分辨率最高但非高帧率) → hd=超清。
+     *  强制最高默认蓝光；原画由独立开关「面板显示原画」控制（见 live_show_origin）。 */
     private static final String[] CANDIDATES = {"xuhd", "uhd", "origin", "hd"};
 
     /** 进程级武装：冷启动为 true；首次手动切换后解除，直到进程重启 */

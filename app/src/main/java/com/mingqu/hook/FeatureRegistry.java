@@ -38,6 +38,7 @@ public class FeatureRegistry {
                                 "信息流短视频自动以最高清晰度播放",
                                 true,
                                 new VideoMaxQuality()),
+
                 }));
 
         // =====================================================
