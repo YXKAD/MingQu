@@ -11,6 +11,7 @@
 | 抖音精选 | `com.ss.android.yumme.video` | 屏蔽新版本更新 | 拦截 UpdateHelper.LJIJI 构建的"发现新版本"弹窗及更新页 UpdateActivity |
 | 抖音精选 | `com.ss.android.yumme.video` | 直播自动最高画质 | 进房自动蓝光(最高可用档，逐档探测向下兼容)；手动切换尊重选择，重启恢复强制 |
 | 抖音精选 | `com.ss.android.yumme.video` | 视频自动最高画质 | 冷启动后信息流视频自动最高清晰度（按每视频支持列表向下兼容）；手动切换后不再强制，重启恢复 |
+| 抖音精选 | `com.ss.android.yumme.video` | 直播面板标注分辨率帧率 | 画质面板档位旁标注该档分辨率+帧率（subname 副标题，不改档位名，点击切换不受影响） |
 
 > 均基于 jadx 反编译 v39.8.0 精确定位；日志前缀 `[明渠]` 可在 LSPosed → 日志 中查看命中情况。
 

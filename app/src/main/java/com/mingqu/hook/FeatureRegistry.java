@@ -38,6 +38,12 @@ public class FeatureRegistry {
                                 "信息流短视频自动以最高清晰度播放",
                                 true,
                                 new VideoMaxQuality()),
+                        new FeatureEntry(
+                                "live_quality_label",
+                                "直播面板标注分辨率帧率",
+                                "画质面板档位名后追加该档分辨率+帧率",
+                                true,
+                                new LiveQualityLabel()),
 
                 }));
 
