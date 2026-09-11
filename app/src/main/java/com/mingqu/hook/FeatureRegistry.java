@@ -46,10 +46,22 @@ public class FeatureRegistry {
                                 new LiveQualityLabel()),
                         new FeatureEntry(
                                 "device_spoof",
-                                "机型伪装（vivo Pad6 Pro）",
-                                "伪装为 vivo Pad6 Pro，解锁服务端 2K/4K 视频源（需配合视频强开全档位显示）",
+                                "视频画质全解锁",
+                                "伪装为 vivo Pad6 Pro，解锁服务端 2K/4K 视频源",
                                 true,
                                 new DeviceSpoof()),
+                        new FeatureEntry(
+                                "block_live_card",
+                                "屏蔽推荐流直播间卡片",
+                                "刷推荐视频时直播间卡片不再出现（不显示不占位）",
+                                true,
+                                new BlockLiveCard()),
+                        new FeatureEntry(
+                                "double_tap_comment",
+                                "双击点赞评论区 测试功能",
+                                "双击视频打开评论区；双击打开/关闭评论区时会一直显示暂停标，手动暂停恢复播放后消失",
+                                true,
+                                new DoubleTapComment()),
 
                 }));
 
