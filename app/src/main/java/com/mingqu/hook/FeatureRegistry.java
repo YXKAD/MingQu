@@ -44,6 +44,12 @@ public class FeatureRegistry {
                                 "画质面板档位名后追加该档分辨率+帧率",
                                 true,
                                 new LiveQualityLabel()),
+                        new FeatureEntry(
+                                "device_spoof",
+                                "机型伪装（vivo Pad6 Pro）",
+                                "伪装为 vivo Pad6 Pro，解锁服务端 2K/4K 视频源（需配合视频强开全档位显示）",
+                                true,
+                                new DeviceSpoof()),
 
                 }));
 

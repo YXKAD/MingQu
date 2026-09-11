@@ -45,16 +45,21 @@ public class VideoMaxQuality implements FeatureEntry.FeatureHook {
                         @Override
                         protected void beforeHookedMethod(MethodHookParam param) {
                             try {
-                                // 强开：返回全手动档位（含 1440p/2160p），放回被机型过滤砍掉的 2K/4K
-                                Object[] full = allManualResolutions(cl);
-                                param.setResult(full);
-                                StringBuilder sb = new StringBuilder("[明渠] 视频支持列表强开全档: ");
-                                for (Object o : full) {
-                                    sb.append(((Enum) o).name()).append(" ");
+                                // 只探针不干预：面板档位 = 设备支持 ∩ 服务端源。
+                                // 机型伪装(Pad6 Pro)后服务端下发 2K/4K 源、支持列表含 4K，
+                                // 无源档位不再显示（去掉原强开全档显示，避免灰档）
+                                Object[] full = (Object[]) param.getResult();
+                                StringBuilder sb = new StringBuilder("[明渠] 视频支持列表(设备能力): ");
+                                if (full != null) {
+                                    for (Object o : full) {
+                                        if (o instanceof Enum) {
+                                            sb.append(((Enum) o).name()).append(" ");
+                                        }
+                                    }
                                 }
                                 XposedBridge.log(sb.toString());
                             } catch (Throwable t) {
-                                XposedBridge.log("[明渠] 支持列表强开异常: " + t);
+                                XposedBridge.log("[明渠] 支持列表探针异常: " + t);
                             }
                         }
                     });
